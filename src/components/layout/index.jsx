@@ -1,15 +1,13 @@
-import Header from "./Header";
+import Header from "../common/Header";
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <div className="flex items-center justify-center">
-        <Header />
-      </div>
-      <main className="flex items-center justify-center flex-col w-full h-full p-4 bg-[#f4f2ee]">
+    <div className="flex flex-col items-center">
+      <Header />
+      <main className="container mx-auto w-full h-full min-h-screen pt-4 bg-[#f4f2ee]">
         {children}
       </main>
-    </>
+    </div>
   );
 };
 
