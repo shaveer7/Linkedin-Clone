@@ -5,7 +5,7 @@ const PostReactions = () => {
         href="#"
         className="flex items-center text-sm text-gray-500 hover:underline hover:text-blue-600"
       >
-        <span className="flex items-center relative mr-4">
+        <span className="flex items-center relative mr-4 !z-0">
           <img
             src="/likeReact.svg"
             className="object-cover border-2 border-white"

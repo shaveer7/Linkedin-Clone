@@ -1,8 +1,8 @@
-const Tooltip = ({Icon,tooltip}) => {
+const Tooltip = ({ Icon, tooltip }) => {
   return (
-    <div>
-      <div className="relative group inline-block">
-        <Icon/>
+    <>
+      <div className="relative group inline-block hover:cursor-pointer">
+        <Icon />
         <div
           className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 -translate-y-2 
                   group-hover:translate-y-0 border border-[#E8E8E8] bg-white text-sm rounded-lg shadow-[5px_12px_6px_-5px_rgba(0,_0,_0,_0.1)]
@@ -12,7 +12,7 @@ const Tooltip = ({Icon,tooltip}) => {
           {tooltip}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
