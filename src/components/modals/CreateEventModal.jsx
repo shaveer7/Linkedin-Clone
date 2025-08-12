@@ -1,4 +1,4 @@
-export default function AddMediaModal({ open, onClose, children }) {
+export default function CreateEventModal({ open, onClose, children }) {
   return (
     <div
       onClick={onClose}
@@ -10,7 +10,7 @@ export default function AddMediaModal({ open, onClose, children }) {
       <div
         onClick={(e) => e.stopPropagation()}
         className={`
-          bg-white rounded-xl shadow transition-all w-[100%] 
+          bg-white rounded-xl shadow transition-all w-[80%] 
           ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}
         `}
       >

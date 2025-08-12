@@ -1,9 +1,9 @@
-export default function AddMediaModal({ open, onClose, children }) {
+export default function SelectCompanyModal({ open, onClose, children }) {
   return (
     <div
       onClick={onClose}
       className={`
-        fixed inset-0 flex justify-center items-center transition-colors h-full z-50 
+        fixed inset-0 flex justify-center items-center transition-colors h-full z-50
         ${open ? "visible bg-black/50" : "invisible"}
       `}
     >

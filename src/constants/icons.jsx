@@ -471,6 +471,27 @@ export const ArrowDownIcon = (props) => {
   );
 };
 
+export const SmallArrowDownIcon = (props) => {
+  return (
+    <svg
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      id="caret-small"
+      aria-hidden="true"
+      role="none"
+      data-supported-dps="16x16"
+      fill="#000000"
+      fillOpacity={0.9}
+      width={16}
+      height={16}
+      {...props}
+    >
+      <path d="M8 11L3 6h10z" fillRule="evenodd" fillOpacity={0.9} />
+    </svg>
+  );
+};
+
 export const CrossIcon = (props) => {
   return (
     <svg
@@ -516,54 +537,17 @@ export const AddMediaIcon = (props) => (
 
 export const StarburstIcon = (props) => (
   <svg
-    viewBox="0 0 100 100"
+    xmlns="http://www.w3.org/2000/svg"
     width={24}
     height={24}
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-    role="none"
+    viewBox="0 0 24 24"
     fill="#666666"
+    fillOpacity={0.9}
+    aria-hidden="true"
+    role="img"
     {...props}
   >
-    <path
-      d="
-        M50,5
-        L56.18,34.55
-        L80.90,19.10
-        L65.45,43.82
-        L95,50
-        L65.45,56.18
-        L80.90,80.90
-        L56.18,65.45
-        L50,95
-        L43.82,65.45
-        L19.10,80.90
-        L34.55,56.18
-        L5,50
-        L34.55,43.82
-        L19.10,19.10
-        L43.82,34.55
-        Z"
-      fill="currentColor"
-    />
-    <line
-      x1="25"
-      y1="45"
-      x2="75"
-      y2="45"
-      stroke="white"
-      strokeWidth="4"
-      strokeLinecap="round"
-    />
-    <line
-      x1="25"
-      y1="55"
-      x2="75"
-      y2="55"
-      stroke="white"
-      strokeWidth="4"
-      strokeLinecap="round"
-    />
+    <path d="M22 11.1L20.47 10a1.09 1.09 0 01-.4-1.25l.62-1.81a1.11 1.11 0 00-.7-1.4 1.07 1.07 0 00-.35-.06h-2a1.09 1.09 0 01-1.05-.76l-.59-2A1.09 1.09 0 0015 2a1.11 1.11 0 00-.66.22l-1.69 1.17a1.13 1.13 0 01-1.31 0L9.75 2.22a1.11 1.11 0 00-1.55.16 1.07 1.07 0 00-.2.38L7.41 4.7a1.09 1.09 0 01-1 .76h-2a1.11 1.11 0 00-1.16 1.06 1.34 1.34 0 00.06.4l.63 1.82a1.1 1.1 0 01-.4 1.26L2 11.11a1.1 1.1 0 00-.26 1.53 1.28 1.28 0 00.26.26L3.53 14a1.09 1.09 0 01.4 1.25l-.62 1.8a1.11 1.11 0 00.7 1.4 1.07 1.07 0 00.35.06h2a1.09 1.09 0 011 .76l.64 2a1.12 1.12 0 001.1.73 1.05 1.05 0 00.64-.22l1.6-1.17a1.1 1.1 0 011.31 0l1.6 1.17a1.14 1.14 0 001.75-.55l.62-1.93a1.11 1.11 0 011.05-.76h2a1.11 1.11 0 001.11-1.11 1 1 0 00-.06-.35l-.63-1.82a1.11 1.11 0 01.38-1.26L22 12.89a1.07 1.07 0 00.5-.89 1.1 1.1 0 00-.5-.9zM7 11v-1h10v1zm2 3v-1h6v1z" />
   </svg>
 );
 
@@ -588,7 +572,7 @@ export const GrayPlusIcon = (props) => (
         aria-hidden="true"
         role="none"
         data-supported-dps="24x24"
-        fill="#666666"
+        fill="#000000"
         fillOpacity="0.9"
       >
         <path d="M21 13h-8v8h-2v-8H3v-2h8V3h2v8h8z" fillOpacity="0.9"></path>
@@ -600,23 +584,17 @@ export const GrayPlusIcon = (props) => (
 
 export const CreateEventsIcon = (props) => (
   <svg
-    xmlnsXlink="http://www.w3.org/1999/xlink"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 16 16"
-    id="calendar-small"
-    aria-hidden="true"
-    role="none"
-    data-supported-dps="16x16"
-    fill="#666666"
-    fillOpacity={0.9}
     width={24}
     height={24}
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    role="img"
+    fill="#666666"
+    fillOpacity={0.9}
     {...props}
   >
-    <path
-      d="M2 2v9a3 3 0 003 3h6a3 3 0 003-3V2zm8.5 1.5a1 1 0 11-1 1 1 1 0 011-1zm-5 0a1 1 0 11-1 1 1 1 0 011-1zM12 11a1 1 0 01-1 1H5a1 1 0 01-1-1V7h8z"
-      fillOpacity={0.9}
-    />
+    <path d="M3 3v15c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3V3H3zm13 1.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zm-8 0a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM19 18c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1V9h14v9zM7 11h2v2H7v-2zm0 4h2v2H7v-2zm4-4h2v2h-2v-2zm0 4h2v2h-2v-2zm4-4h2v2h-2v-2zm0 4h2v2h-2v-2z" />
   </svg>
 );
 
@@ -831,4 +809,169 @@ export const UploadPostIcon = (props) => (
       fill="#6e3f33"
     />
   </svg>
+);
+
+export const UploadEventIcon = (props) => (
+  <svg width={48} height={48}>
+    <image
+      href="https://static.licdn.com/aero-v1/sc/h/7lvc02mht78mhn2h6hk5ipiha"
+      x="0"
+      y="0"
+      width="48"
+      height="48"
+    />
+  </svg>
+);
+
+export const LinkedinLiveIcon = (props) => (
+  <svg
+    role="none"
+    aria-hidden="true"
+    className="ef-event-type__dropdown-option-icon"
+    xmlns="http://www.w3.org/2000/svg"
+    width={16}
+    height={16}
+    viewBox="0 0 16 16"
+    {...props}
+  >
+    <path
+      d="M3 3h8v10H3a2 2 0 01-2-2V5a2 2 0 012-2zm10.5 1l-1.5.75v6.5l1.5.75H15V4z"
+      fill="#000000"
+      fillOpacity={0.9}
+    />
+  </svg>
+);
+
+export const ExternalLinkIcon = (props) => (
+  <>
+    <svg width="0" height="0" style={{ position: "absolute" }}>
+      <defs>
+        <symbol id="link-small" viewBox="0 0 16 16">
+          <path d="M8.77 11.03c-.79 0-1.57-.3-2.17-.89-.39-.39-.39-1.02 0-1.42a.996.996 0 011.41 0c.42.42 1.1.42 1.52 0l2.99-2.98c.3-.3.47-.71.47-1.14s-.17-.84-.47-1.14c-.61-.61-1.6-.61-2.21 0l-.39.39a.996.996 0 01-1.41 0c-.39-.39-.39-1.03 0-1.42l.39-.39a3.573 3.573 0 016.09 2.56 3.6 3.6 0 01-1.06 2.56l-2.99 2.98c-.6.6-1.39.89-2.17.89zm-1.68 2.94l.39-.39a.996.996 0 10-1.41-1.41l-.39.39c-.61.61-1.6.61-2.21 0-.3-.3-.47-.71-.47-1.14s.17-.84.47-1.14l3-2.98c.42-.42 1.1-.42 1.52 0 .39.39 1.02.39 1.41 0 .39-.39.39-1.03 0-1.42a3.096 3.096 0 00-4.35 0l-3 2.98c-.69.68-1.06 1.59-1.06 2.56s.38 1.88 1.06 2.56c.69.69 1.6 1.03 2.51 1.03s1.82-.34 2.51-1.03z" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <svg
+      width={16}
+      height={16}
+      role="img"
+      aria-hidden="true"
+      className="ef-event-type__dropdown-option-icon"
+    >
+      <use href="#link-small" />
+    </svg>
+  </>
+);
+
+export const MinusCornerIcon = (props) => (
+  <svg
+    aria-hidden="true"
+    className="date-time-picker-v2__validation-error-icon"
+    xmlns="http://www.w3.org/2000/svg"
+    width={16}
+    height={16}
+    viewBox="0 0 16 16"
+  >
+    <defs>
+      <symbol
+        id="signal-error-small"
+        viewBox="0 0 16 16"
+        fill="#000000"
+        fillOpacity={0.9}
+      >
+        <path
+          d="M10.8 1H5.2L1 5.2v5.6L5.2 15h5.6l4.2-4.2V5.2zM12 9H4V7h8z"
+          fillOpacity={0.9}
+        />
+      </symbol>
+    </defs>
+    <use href="#signal-error-small" />
+  </svg>
+);
+
+export const SearchSpeakerIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    role="none"
+    width={20}
+    height={20}
+    fill="#666666"
+    fillOpacity={0.9}
+    {...props}
+  >
+    <path
+      d="M21.41 18.59l-5.27-5.28A6.83 6.83 0 0017 10a7 7 0 10-7 7 6.83 6.83 0 003.31-.86l5.28 5.27a2 2 0 002.82-2.82zM5 10a5 5 0 115 5 5 5 0 01-5-5z"
+      fillOpacity={0.9}
+    />
+  </svg>
+);
+
+export const BagModalIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width={24}
+    height={24}
+    aria-hidden="true"
+    role="none"
+    fill="#666666"
+    fillOpacity={0.9}
+  >
+    <path
+      d="M17 6V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2v4a3 3 0 003 3h14a3 3 0 003-3V6zM9 5a1 1 0 011-1h4a1 1 0 011 1v1H9zm10 9a4 4 0 003-1.38V17a3 3 0 01-3 3H5a3 3 0 01-3-3v-4.38A4 4 0 005 14z"
+      fillOpacity={0.9}
+    />
+  </svg>
+);
+
+export const PollModalIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width={24}
+    height={24}
+    fill="#666666"
+    fillOpacity={0.9}
+  >
+    <path d="M23 20v1H1v-1zM8 9H2v10h6zm7-6H9v16h6zm7 11h-6v5h6z" />
+  </svg>
+);
+
+export const DocumentModalIcon = (props) => (
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={24}
+  height={24}
+  viewBox="0 0 24 24"
+  aria-hidden="true"
+>
+  <symbol id="sticky-note-medium" viewBox="0 0 24 24">
+    <path
+      d="M3 3v15a3 3 0 003 3h9v-6h6V3zm9 8H6v-1h6zm6-3H6V7h12zm-2 8h5l-5 5z"
+      fill="#666666"
+      fillOpacity={0.9}
+    />
+  </symbol>
+
+  <use href="#sticky-note-medium" />
+</svg>
+);
+
+export const ExpertModalIcon = (props) => (
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  width={24}
+  height={24}
+  fill="#666666"
+  fillOpacity={0.9}
+>
+  <path
+    d="M18 3h-3l-3-3-3 3H6a3 3 0 00-3 3v12a3 3 0 003 3h12a3 3 0 003-3V6a3 3 0 00-3-3zm-3 16H9v-2a2 2 0 012-2h2a2 2 0 012 2zm-3-6a3 3 0 113-3 3 3 0 01-3 3z"
+    fillOpacity={0.9}
+  />
+</svg>
 );

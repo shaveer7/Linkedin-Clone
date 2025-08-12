@@ -3,3 +3,16 @@
 #root{
   background-color: #f4f2ee;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; 
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #B2B2B2;
+  border-radius: 4px;
+}

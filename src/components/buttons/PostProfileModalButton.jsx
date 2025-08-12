@@ -2,9 +2,13 @@ import { useState } from "react";
 import {
   AddMediaIcon,
   ArrowDownIcon,
+  BagModalIcon,
   CreateEventsIcon,
   CrossIcon,
+  DocumentModalIcon,
+  ExpertModalIcon,
   GrayPlusIcon,
+  PollModalIcon,
   StarburstIcon,
   TimeIcon,
   UploadPostIcon,
@@ -17,6 +21,12 @@ import ReactionModal from "../modals/ReactionModal";
 import AddMediaModal from "../modals/AddMediaModal";
 import UploadButton from "./UploadButton";
 import ColoredButton from "./ColoredButton";
+import CreateEventModal from "../modals/CreateEventModal";
+import EventModalContent from "../modals/EventModalContent";
+import CelebrateOccasionModal from "../modals/CelebrateOccasionModal";
+import CelebrateModalContent from "../modals/CelebrateModalContent";
+import SelectCompanyModal from "../modals/SelectCompanyModal";
+import CompanyModalContent from "../modals/CompanyModalContent";
 
 const PostProfileModalButton = ({
   onClose,
@@ -24,13 +34,22 @@ const PostProfileModalButton = ({
   setOpenNew,
   openMedia,
   setOpenMedia,
+  setOpen,
+  openCreateEvent,
+  setOpenCreateEvent,
+  setOpenCelebrate,
+  openCelebrate,
+  openCompany,
+  setOpenCompany,
 }) => {
-  const handleModalState = () => {
+  const handleModalState = (e) => {
+    e.stopPropagation();
     setOpenMedia(true);
-    setOpen(false);
   };
 
-  //   const [openMedia, setOpenMedia] = useState(false);
+  const [openOccasion, setOpenOccasion] = useState(false);
+  const [opentooltip, setOpenTooltip] = useState(false);
+  const [openHiring,setOpenHiring] = useState(false)
 
   return (
     <>
@@ -78,14 +97,41 @@ const PostProfileModalButton = ({
           </button>
 
           <div className="flex items-center gap-8 pt-6 pb-4 px-7">
-            <button onClick={() => handleModalState(true)}>
-              {/* <button onClick={() => setOpenMedia(true)} > */}
-              <Tooltip Icon={AddMediaIcon} tooltip="Add Media" />
-            </button>
+            <Tooltip
+              onClick={(e) => handleModalState(e)}
+              Icon={AddMediaIcon}
+              tooltip="Add Media"
+            />
 
-            <Tooltip Icon={CreateEventsIcon} tooltip="Create an event" />
-            <Tooltip Icon={StarburstIcon} tooltip="Celebrate an occasion" />
-            <Tooltip Icon={GrayPlusIcon} tooltip="More" />
+            <Tooltip
+              onClick={() => setOpenCreateEvent(true)}
+              Icon={CreateEventsIcon}
+              tooltip="Create an event"
+            />
+            <Tooltip
+              onClick={() => setOpenCelebrate(true)}
+              Icon={StarburstIcon}
+              tooltip="Celebrate an occasion"
+            />
+
+            {opentooltip === true ? (
+              <div className="flex items-center gap-8">
+                <Tooltip
+                  onClick={() => setOpenCompany(true)}
+                  Icon={BagModalIcon}
+                  tooltip="Share that you're hiring"
+                />
+                <Tooltip Icon={PollModalIcon} tooltip="Create a poll" />
+                <Tooltip Icon={DocumentModalIcon} tooltip="Add a document" />
+                <Tooltip Icon={ExpertModalIcon} tooltip="Find an expert" />
+              </div>
+            ) : (
+              <Tooltip
+                onClick={() => setOpenTooltip(true)}
+                Icon={GrayPlusIcon}
+                tooltip="More"
+              />
+            )}
           </div>
           <div className="bg-[#E8E8E8] w-full h-0.5" />
           <div className="flex items-center gap-3 justify-end py-4 px-5">
@@ -107,7 +153,9 @@ const PostProfileModalButton = ({
           <div className="flex items-center justify-between bg-white pl-7 pr-2 py-1">
             <div className="font-semibold text-xl">Editor</div>
             <button
-              onClick={onClose}
+              onClick={() => {
+                setOpenMedia(false);
+              }}
               className=" p-3 rounded-lg text-gray-400 hover:bg-gray-100 hover:rounded-3xl hover:text-gray-600"
             >
               <CrossIcon />
@@ -139,6 +187,39 @@ const PostProfileModalButton = ({
           </div>
         </div>
       </AddMediaModal>
+      <CreateEventModal
+        open={openCreateEvent}
+        onClose={() => setOpenCreateEvent(false)}
+      >
+        <EventModalContent
+          openCreateEvent={openCreateEvent}
+          setOpenCreateEvent={setOpenCreateEvent}
+        />
+      </CreateEventModal>
+
+      <CelebrateOccasionModal
+        open={openCelebrate}
+        onClose={() => setOpenCelebrate(false)}
+      >
+        <CelebrateModalContent
+          openCelebrate={openCelebrate}
+          setOpenCelebrate={setOpenCelebrate}
+          openOccasion={openOccasion}
+          setOpenOccasion={setOpenOccasion}
+        />
+      </CelebrateOccasionModal>
+
+      <SelectCompanyModal
+        open={openCompany}
+        onClose={() => setOpenCompany(false)}
+      >
+        <CompanyModalContent
+          openCompany={openCompany}
+          setOpenCompany={setOpenCompany}
+          openHiring={openHiring}
+          setOpenHiring={setOpenHiring}
+        />
+      </SelectCompanyModal>
     </>
   );
 };

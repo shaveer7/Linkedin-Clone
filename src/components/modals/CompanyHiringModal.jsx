@@ -1,4 +1,4 @@
-export default function AddMediaModal({ open, onClose, children }) {
+export default function CompanyHiringModal({ open, onClose, children }) {
   return (
     <div
       onClick={onClose}

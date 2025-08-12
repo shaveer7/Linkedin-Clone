@@ -1,4 +1,4 @@
-export default function AddMediaModal({ open, onClose, children }) {
+const OccasionModal = ({ open, onClose, children }) => {
   return (
     <div
       onClick={onClose}
@@ -18,4 +18,6 @@ export default function AddMediaModal({ open, onClose, children }) {
       </div>
     </div>
   );
-}
+};
+
+export default OccasionModal;
